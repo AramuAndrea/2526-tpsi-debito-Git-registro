@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+
+public class Studente {
+
+    private String nome;
+    private String matricola;
+    private ArrayList<Integer> voti;
+
+    public Studente(String nome, String matricola) {
+
+        this.nome = nome;
+        this.matricola = matricola;
+        this.voti = new ArrayList<>();
+
+    }
+
+    public void aggiungiVoto(int voto) {
+        voti.add(voto);
+
+    }
+
+    public double calcolaMedia() {
+
+        if (voti.isEmpty()) {
+            return 0;
+
+        }
+
+        int somma = 0;
+
+        for (int voto : voti) {
+            somma += voto;
+
+        }
+
+        return (double) somma / voti.size();
+
+    }
+
+    public void stampaReport() {
+
+        System.out.println("Nome: " + nome);
+        System.out.println("Matricola: " + matricola);
+        System.out.println("Media: " + calcolaMedia());
+        System.out.println("---------------------");
+
+    }
+
+}
