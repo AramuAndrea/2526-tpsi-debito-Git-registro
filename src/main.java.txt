@@ -1,0 +1,21 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        Studente s1 = new Studente("Mario Rossi", "A001");
+
+        Studente s2 = new Studente("Luca Bianchi", "A002");
+
+        s1.aggiungiVoto(8);
+        s1.aggiungiVoto(7);
+        s1.aggiungiVoto(9);
+
+
+        s2.aggiungiVoto(6);
+        s2.aggiungiVoto(7);
+
+
+        s1.stampaReport();
+        s2.stampaReport();
+
+    }
